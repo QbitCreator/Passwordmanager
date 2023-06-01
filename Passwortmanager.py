@@ -3,7 +3,6 @@ import tkinter as tk
 import hashlib as hl
 import random
 import string
-import os
 
 def digest_to_pass(digest):
         chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345678901234567890!?&%/§$()=+!§$%&/(=?-)"
