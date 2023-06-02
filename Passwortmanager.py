@@ -36,7 +36,7 @@ class PasswordManager:
             if i==self.__prerounds/2:
                 saltyhash=password
                 
-        pc.copy(digest_to_pass(password[((len(password)-self.__password_out_length):]))
+        pc.copy(digest_to_pass(password[(len(password)-self.__password_out_length):]))
         
         return service, username
         
@@ -51,7 +51,7 @@ class PasswordManager:
             if i==self.__prerounds/2:
                 saltyhash=password
             
-        pc.copy(digest_to_pass(password[((len(password)-self.__password_out_length):]))
+        pc.copy(digest_to_pass(password[(len(password)-self.__password_out_length):]))
         
     def delete_entry(self, index):
         self.__data[index]={"service":"None", "username":"None"}
