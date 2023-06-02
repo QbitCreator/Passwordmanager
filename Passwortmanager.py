@@ -17,6 +17,7 @@ class PasswordManager:
         self.__data = data
         self.__prerounds = 100000
         self.__hashalgo = hl.sha3_512
+        self.__password_out_length=16
         
     def unlock(self, password):
         self.__main_password=password            
@@ -35,7 +36,7 @@ class PasswordManager:
             if i==self.__prerounds/2:
                 saltyhash=password
                 
-        pc.copy(digest_to_pass(password[32:]))
+        pc.copy(digest_to_pass(password[((len(password)-self.__password_out_length):]))
         
         return service, username
         
@@ -50,7 +51,7 @@ class PasswordManager:
             if i==self.__prerounds/2:
                 saltyhash=password
             
-        pc.copy(digest_to_pass(password[32:]))
+        pc.copy(digest_to_pass(password[((len(password)-self.__password_out_length):]))
         
     def delete_entry(self, index):
         self.__data[index]={"service":"None", "username":"None"}
