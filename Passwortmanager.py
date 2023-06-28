@@ -62,8 +62,7 @@ except:
   data=[]
   database.write(salt + "\n")
   database.close()
-finally:
-  database.close()
+  
 #Initialisieren der Passwortmanager-Klasse
 pm=PasswordManager(salt,data)
 #Eingabe des Master-Passworts
