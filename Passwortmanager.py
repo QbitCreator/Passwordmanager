@@ -45,7 +45,7 @@ class PasswordManager:
     pc.copy(digest_to_pass(password[(len(password)-self.__password_out_length):]))
   def delete_entry(self, index):
     self.__data[index]={"service":"None", "username":"None"}
-    filename="pm.db"
+filename="pm.db"
 try:
 #Wenn Datenbank-Datei vorhanden, öffne sie
   database=open(filename,"r")
