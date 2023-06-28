@@ -69,7 +69,7 @@ pm=PasswordManager(salt,data)
 master_pass=pwinput.pwinput(prompt="Geben Sie das Master-Passwort ein: ")
 while len(master_pass)<8:
   master_pass=pwinput.pwinput(prompt="Unter allen Umständen zu kurz... Geben Sie das Master-Passwort ein: ")
-  pm.unlock(input("Geben Sie das Master-Passwort ein:"))
+pm.unlock(master_pass)
 while True:
   print("Aktuelle Passwortliste:\n_____________________________________")
   for i, entry in enumerate(pm.get_list()):
